@@ -3,7 +3,7 @@ import { openai } from './ai'
 
 export const runLLM = async ({ messages }: { messages: AIMessage[] }) => {
   const response = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+    model:"openai/gpt-4o",
     temperature: 0.1,
     messages,
   })
